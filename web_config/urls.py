@@ -17,7 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from home import views
+from hello import views as helloviews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('hello/form/', helloviews.form, name="helloform"),
+    path('hello/responsewithhtml/', helloviews.responsewithhtml),
 ]
