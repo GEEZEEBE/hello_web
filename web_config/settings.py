@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'home.apps.HomeConfig',
     'hello.apps.HelloConfig',
+    'board.apps.BoardConfig',
 ]
 
 MIDDLEWARE = [
