@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORK-NET</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <table class="table table-striped table-hover table-responsive">
+            <h1 class="display-1">WORKNET</h1>
+            <h1> - 4th Industrial Revolution</h1>
+            <tr>
+                <a href="#" class="btn btn-warning btn-lg font-weight-bold">To K-STARTUP...</a>
+            </tr>
+            <thead class="thead-dark">
+                <tr>
+                    <th>COMPANY</th>
+                    <th>INFORMATION</th>
+                    <th>TASK</th>
+                    <th>CAREER</th>
+                    <th>EDUCATION LEVEL</th>
+                    <th>LOCATION</th>
+                    <th>SALARY</th>
+                    <th>WORK TIME</th>
+                    <th>REGISTERED</th>
+                    <th>DUE DATE</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for d in data.0 %}
+                <tr>
+                    <td>{{d.company}}</td>
+                    <td>{{d.info}}</td>
+                    <td>{{d.task}}</td>
+                    <td>{{d.career}}</td>
+                    <td>{{d.edu_level}}</td>
+                    <td>{{d.location}}</td>
+                    <td>{{d.salary}}</td>
+                    <td>{{d.work_time}}</td>
+                    <td>{{d.reg_date}}</td>
+                    <td>{{d.due_date}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+    <table class="table table-striped">
+        <tr>
+            <th>COMPANY</th>
+            <th>INFORMATION</th>
+            <th>TASK</th>
+            <th>CAREER</th>
+            <th>EDUCATION LEVEL</th>
+            <th>LOCATION</th>
+            <th>SALARY</th>
+            <th>WORK TIME</th>
+            <th>REGISTERED</th>
+            <th>DUE DATE</th>
+        </tr>
+        {% for d in data.0 %}
+        <tr>
+            <td>{{d.company}}</td>
+            <td>{{d.info}}</td>
+            <td>{{d.task}}</td>
+            <td>{{d.career}}</td>
+            <td>{{d.edu_level}}</td>
+            <td>{{d.location}}</td>
+            <td>{{d.salary}}</td>
+            <td>{{d.work_time}}</td>
+            <td>{{d.reg_date}}</td>
+            <td>{{d.due_date}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+</body>
+</html>

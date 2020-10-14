@@ -26,4 +26,7 @@ urlpatterns = [
     path('hello/responsewithhtml/', helloviews.responsewithhtml),
     path('hello/template/', helloviews.template, name="template"),
     path('board/listwithmongo/', boardviews.listwithmongo),
+    path('board/list/kstartup', boardviews.list_kstartup),
+    path('board/list/workorkr', boardviews.list_workorkr),
+
 ]

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-STARTUP</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <table class="table table-striped table-hover table-responsive">
+            <h1 class="display-1">K-STARTUP</h1>
+            <tr>
+                <a href="#" class="btn btn-warning btn-lg font-weight-bold">To WORKNET...</a>
+            </tr>
+            <thead class="thead-dark">
+                <tr>
+                    <th>TITLE</th>
+                    <th>FIELD</th>
+                    <th>PROGRAM</th>
+                    <th>INSTITUTE</th>
+                    <th>DUE DATE</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for d in data.0 %}
+                <tr>
+                    <td>{{d.title}}</td>
+                    <td>{{d.field}}</td>
+                    <td>{{d.program}}</td>
+                    <td>{{d.institute}}</td>
+                    <td>{{d.due_date}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
