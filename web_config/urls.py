@@ -19,6 +19,8 @@ from django.urls import path
 from home import views
 from hello import views as helloviews
 from board import views as boardviews
+from maps import views as mapsviews
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
@@ -26,7 +28,9 @@ urlpatterns = [
     path('hello/responsewithhtml/', helloviews.responsewithhtml),
     path('hello/template/', helloviews.template, name="template"),
     path('board/listwithmongo/', boardviews.listwithmongo),
+    path("board/listwithmongowithpaginator/", boardviews.listwithmongowithpaginator, name="listwithmongowithpaginator"),				# add
     path('board/list/kstartup', boardviews.list_kstartup),
     path('board/list/workorkr', boardviews.list_workorkr),
+    path('maps/showmapwithfolium', mapsviews.showmapwithfolium, name='show_map'),
 
 ]
